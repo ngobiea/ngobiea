@@ -2,32 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
   }
+} 
+
+
+/* For WebKit browsers (Chrome, Safari) */
+
+/* Track */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Set the width of the scrollbar */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #26282c;
+    /* Set the color of the scrollbar handle */
+    border-radius: 6px;
+    /* Set the border radius of the scrollbar handle */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2c3958;
+    /* Set the color of the scrollbar handle on hover */
 }
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+    background-color: #ddd;
+    /* Set the color of the scrollbar track on hover */
+}
+
+/* Track fill */
+::-webkit-scrollbar-track-piece {
+    background-color: #ddd;
+    /* Set the color of the scrollbar track */
+}
+
+/* Handle when grabbing it */
+::-webkit-scrollbar-thumb:active {
+    background-color: #333;
+    /* Set the color of the scrollbar handle when grabbing it */
+}
+
+
