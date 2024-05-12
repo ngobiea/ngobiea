@@ -14,6 +14,7 @@ interface Project {
     stars?: number;
     forks?: number;
     isPublic: boolean;
+    downloadUrl: string | null;
   }
   images: { alt: string; src: string }[];
   lessonsLearned: string[];
@@ -21,7 +22,7 @@ interface Project {
   published: boolean;
   status: ProjectStatus;
   slug: string;
-  youtube: string;
+  youtube: string|null;
 }
 
 interface Technology {

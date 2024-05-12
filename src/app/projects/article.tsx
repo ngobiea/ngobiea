@@ -22,10 +22,10 @@ export const Article: React.FC<Props> = ({ project, views }) => {
               <span>SOON</span>
             )}
           </span>
-          <span className='text-gray-500 text-xs  flex items-center gap-1'>
+          {/* <span className='text-gray-500 text-xs  flex items-center gap-1'>
             <FaRegEye className='w-4 h-4' />{' '}
             {Intl.NumberFormat('en-US', { notation: 'compact' }).format(views)}
-          </span>
+          </span> */}
         </div>
         <h2 className='z-20 text-xl font-medium duration-1000 lg:text-3xl text-gray-200 group-hover:text-white font-display'>
           {project.title}

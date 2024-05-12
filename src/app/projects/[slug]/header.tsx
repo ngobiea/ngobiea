@@ -2,16 +2,17 @@
 import { BiArrowBack } from 'react-icons/bi';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import { FaRegEye, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { SiYoutube } from 'react-icons/si';
 import Particles from '@/components/particles';
 import { MdOutlineStarOutline } from 'react-icons/md';
+import { RiGitRepositoryPrivateFill } from 'react-icons/ri';
+import { Tooltip } from '@material-tailwind/react';
 type Props = {
   project: Project;
-
   stars: number;
 };
-export const Header: React.FC<Props> = ({ project,stars }) => {
+export const Header: React.FC<Props> = ({ project, stars }) => {
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIsIntersecting] = useState(true);
 
@@ -27,6 +28,13 @@ export const Header: React.FC<Props> = ({ project,stars }) => {
       label: 'View Project',
       href: project.youtube,
     });
+  }
+  if (project.github.downloadUrl !== null) { 
+    links.push({
+      label: 'Download',
+      href: project.github.downloadUrl,
+    });
+  
   }
   useEffect(() => {
     if (!ref.current) {
@@ -51,43 +59,68 @@ export const Header: React.FC<Props> = ({ project,stars }) => {
       >
         <div className='container flex flex-row-reverse items-center justify-between p-6 mx-auto'>
           <div className='flex justify-between gap-8'>
-            <span
-              title='View counter for this page'
-              className={`duration-200 hover:font-medium flex items-center gap-1 hover:text-gray-100 ${
-                isIntersecting ? 'text-gray-400' : 'text-gray-600'
+            {project.github.isPublic && (
+              <Tooltip content='GitHub Stars' placement='bottom'>
+                <span
+                  className={`duration-200 hover:font-medium flex items-center gap-1 hover:text-gray-100 ${
+                    isIntersecting ? 'text-gray-400' : 'text-gray-600'
+                  } `}
+                >
+                  <MdOutlineStarOutline className='w-5 h-5' />{' '}
+                  {Intl.NumberFormat('en-US', { notation: 'compact' }).format(
+                    stars
+                  )}
+                </span>
+              </Tooltip>
+            )}
+            {project.youtube && (
+              <Tooltip content='Watch on YouTube' placement='bottom'>
+                <Link target='_blank' href={project.youtube}>
+                  <SiYoutube
+                    className={`w-6 h-6 duration-200 hover:font-medium hover:text-gray-100 ${
+                      isIntersecting ? ' text-gray-400 ' : 'text-gray-600 '
+                    } `}
+                  />
+                </Link>
+              </Tooltip>
+            )}
+
+            {project.github.isPublic ? (
+              <Tooltip content='View on Github' placement='bottom'>
+                <Link target='_blank' href={project.github.url}>
+                  <FaGithub
+                    className={`w-6 h-6 duration-200 hover:font-medium ${
+                      isIntersecting
+                        ? ' text-gray-400 hover:text-gray-100'
+                        : 'text-gray-600 hover:text-gray-100'
+                    } `}
+                  />
+                </Link>
+              </Tooltip>
+            ) : (
+              <Tooltip content='Private Repository' placement='bottom'>
+                <span>
+                  <RiGitRepositoryPrivateFill
+                    className={`w-6 h-6 duration-200 hover:font-medium ${
+                      isIntersecting
+                        ? ' text-gray-400 hover:text-gray-100'
+                        : 'text-gray-600 hover:text-gray-100'
+                    } `}
+                  />
+                </span>
+              </Tooltip>
+            )}
+          </div>
+          <Tooltip content='Back to Projects' placement='bottom'>
+            <Link
+              href='/projects'
+              className={`duration-200 hover:font-medium hover:text-gray-100 ${
+                isIntersecting ? ' text-gray-400' : 'text-gray-600'
               } `}
             >
-              <MdOutlineStarOutline className='w-5 h-5' />{' '}
-              {Intl.NumberFormat('en-US', { notation: 'compact' }).format(
-                stars
-              )}
-            </span>
-            <Link target='_blank' href={project.youtube}>
-              <SiYoutube
-                className={`w-6 h-6 duration-200 hover:font-medium hover:text-gray-100 ${
-                  isIntersecting ? ' text-gray-400 ' : 'text-gray-600 '
-                } `}
-              />
+              <BiArrowBack className='w-6 h-6 ' />
             </Link>
-            <Link target='_blank' href={project.github.url}>
-              <FaGithub
-                className={`w-6 h-6 duration-200 hover:font-medium ${
-                  isIntersecting
-                    ? ' text-gray-400 hover:text-gray-100'
-                    : 'text-gray-600 hover:text-gray-100'
-                } `}
-              />
-            </Link>
-          </div>
-
-          <Link
-            href='/projects'
-            className={`duration-200 hover:font-medium hover:text-gray-100 ${
-              isIntersecting ? ' text-gray-400' : 'text-gray-600'
-            } `}
-          >
-            <BiArrowBack className='w-6 h-6 ' />
-          </Link>
+          </Tooltip>
         </div>
       </div>
       <div className='container mx-auto relative isolate overflow-hidden  py-24 sm:py-32'>

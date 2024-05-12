@@ -37,7 +37,6 @@ export default async function PostPage({ params }: Readonly<Props>) {
     repo: foundProject.github.name,
     isPublic: foundProject.github.isPublic,
   });
-  console.log(repo?.stargazers_count);
 
   return (
     <>

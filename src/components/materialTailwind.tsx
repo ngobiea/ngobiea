@@ -20,4 +20,5 @@ export {
   ListItemPrefix,
   ListItemSuffix,
   Chip,
+  tooltip,
 } from '@material-tailwind/react';
