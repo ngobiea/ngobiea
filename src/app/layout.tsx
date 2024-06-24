@@ -18,7 +18,8 @@ const calSans = LocalFont({
 
 export const metadata: Metadata = {
   title: 'ngobiea',
-  description: 'I build things for the web.',
+  description:
+    'I am a professional software engineer and a full-stack developer. I am passionate about building software that solves real-world problems and helps people.',
   robots: {
     index: true,
     follow: true,
@@ -56,7 +57,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
 
 export default function RootLayout({
   children,

@@ -18,7 +18,8 @@ interface Project {
   }
   images: { alt: string; src: string }[];
   lessonsLearned: string[];
-  date: string;
+  startDate: Date;
+  endDate: Date | null;
   published: boolean;
   status: ProjectStatus;
   slug: string;

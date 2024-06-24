@@ -1,9 +1,11 @@
 import { flutter, riverpod, vsCode, git, github } from '@/components/icons';
 
 export const wifiMobile: Project = {
-  date: '2024-01-01',
-  rationale: '',
-  description: `WiFi Share mobile is a the mobile version of WiFi Share. It is a free and open source utility software application. 
+  startDate: new Date(2024, 4, 11),
+  endDate: null,
+  rationale: 'I want to build a mobile version of WiFi Share to target older versions of Android that do not support wifi sharing.',
+  description: `The mobile version of WiFi Share. It will mainly target older versions of Android that do not support wifi sharing.
+   It is a free and open source utility software application. 
     It provides the ease of sharing computer's internet connection with other devices. It is built with Flutter and Riverpod.`,
 
   title: 'WiFi Share-Mobile',
@@ -18,17 +20,16 @@ export const wifiMobile: Project = {
     },
   ],
   lessonsLearned: [
-    'I learned how to build desktop applications with Electron.js and React.js',
-    'I learned how to manage state with Redux',
-    'I learned how to use React Hook Form for form validation',
+    'I learned how to build mobile applications with Flutter and Riverpod',
+    'I learned how to manage state with Riverpod',
   ],
   published: true,
   github: {
     author: 'ngobiea',
-    name: 'wifi-share',
+    name: 'wifi_share',
     url: 'https://github.com/ngobiea/wifi_share',
-      isPublic: true,
-        downloadUrl: null,
+    isPublic: true,
+    downloadUrl: null,
   },
   slug: 'wifi_share',
   status: {

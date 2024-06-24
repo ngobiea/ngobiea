@@ -24,7 +24,8 @@ export const scholar: Project = {
   rationale: `During my bachelor's degree, I stay in many private hostels. I interview many hostel owners on the need for a software application that helps them manage their hostels.
     After getting the requirements from the hostel owners, I decided to build Scholar. At completion I was able to sell the application to many hostel owners.
     `,
-  date: new Date(2024, 0, 1).toISOString(),
+    startDate: new Date(2024, 0, 1),
+    endDate: new Date(2024, 0, 30),
   description: `Scholar is a desktop application that helps hostel managers manage their hostels. 
     It allows hostel managers to manage multiple hostels. For a given hostel they can manage students, rooms, payments and other income.
     The application provides an admin dashboard for data analytics and visualisation. It also allows hostel managers to generate reports, export and import of data.`,

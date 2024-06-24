@@ -1,10 +1,19 @@
-import { typescript, nextjs, reactJs, tailwindCss, vsCode, git, github } from '@/components/icons';
+import {
+  typescript,
+  nextjs,
+  reactJs,
+  tailwindCss,
+  vsCode,
+  git,
+  github,
+} from '@/components/icons';
 
 export const ngobiea: Project = {
   title: 'ngobiea',
   rationale: '',
-  date: new Date(2024, 4, 1).toISOString(),
-  description: `I built my personal portfolio to showcase my projects, skills, and experiences. It is built with Next.js, React.js, Tailwind CSS, and TypeScript.`,
+  startDate: new Date(2024, 4, 1),
+  endDate: new Date(2024, 4, 12),
+  description: `I built my personal portfolio to showcase my projects, skills, and experiences.`,
   features: [
     'Project showcase',
     'Skills showcase',
@@ -13,18 +22,16 @@ export const ngobiea: Project = {
   ],
   images: [],
   lessonsLearned: [
-    'I learned how to build web applications with Next.js and React.js',
-    'I learned how to manage state with React.js',
-    'I learned how to use Tailwind CSS for styling',
-    'I learned how to use TypeScript for type safety',
+    'I learned how to build web applications with Next.js',
+    'I learn the use of Github API to access and manage my repositories',
   ],
   published: true,
   github: {
     author: 'ngobiea',
     url: '',
     name: 'ngobiea',
-      isPublic: true,
-        downloadUrl: null,
+    isPublic: true,
+    downloadUrl: null,
   },
   slug: 'ngobiea',
   status: {

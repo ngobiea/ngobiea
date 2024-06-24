@@ -27,7 +27,8 @@ import {
 
 export const dlsms: Project = {
   title: 'Distance Learning Student Monitoring System(DLSMS)',
-  date: new Date(2023, 9, 1).toISOString(),
+  startDate: new Date(2023, 9, 1),
+  endDate: new Date(2023, 10, 1),
   description: `DLSMS is a desktop-base application that utilize 
     computer vision and machine learning technology to provides an
     innovative solution to monitor and assess student's performance
@@ -69,7 +70,7 @@ export const dlsms: Project = {
     'I learned how to use WebRTC to build video streaming and conferencing applications',
     'I learned how to leverage cloud technology to build complete software solutions',
     'I learned how to use Docker to containerize applications',
-    'I learned how to use copyLeaks api to detect plagiarism in submitted assignments',
+    'I learn the application of webhook using CopyLeaks API to detect plagiarism in student submissions',
     'I learned the use of redux toolkit to manage application wide state and api data fetching',
   ],
   published: true,
