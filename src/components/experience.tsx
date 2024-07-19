@@ -12,7 +12,7 @@ const experiences = [
   {
     title: 'Full Stack Web Developer',
     institution: 'SOULTERS DIGITAL INNOVATIONS',
-    date: 'March 2024 - Present',
+    date: 'October 2023 - May 2024',
   },
 ];
 
