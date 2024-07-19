@@ -1,18 +1,17 @@
-
 import { Timeline } from '@/components/materialTailwind';
 import { PiSuitcaseSimpleBold } from 'react-icons/pi';
 import EECard from './eecard';
 
 const experiences = [
   {
-    title: 'Software Engineer & Developer',
-    institution: 'FREELANCE',
-    date: 'January 2024 - Present',
-  },
-  {
     title: 'Full Stack Web Developer',
     institution: 'SOULTERS DIGITAL INNOVATIONS',
     date: 'October 2023 - May 2024',
+  },
+  {
+    title: 'Software Engineer & Developer',
+    institution: 'FREELANCE',
+    date: 'January 2024 - Present',
   },
 ];
 
