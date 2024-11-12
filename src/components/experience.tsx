@@ -4,14 +4,19 @@ import EECard from './eecard';
 
 const experiences = [
   {
-    title: 'Full Stack Web Developer',
-    institution: 'SOULTERS DIGITAL INNOVATIONS',
-    date: 'October 2023 - May 2024',
+    title: 'FULL TIME LECTURER',
+    institution: 'LIMKOKWING UNIVERSITY OF CREATIVE TECHNOLOGY, SIERRA LEONE',
+    date: 'July 2024 - Present',
   },
   {
     title: 'Software Engineer & Developer',
     institution: 'FREELANCE',
     date: 'January 2024 - Present',
+  },
+  {
+    title: 'Full Stack Web Developer',
+    institution: 'SOULTERS DIGITAL INNOVATIONS',
+    date: 'October 2023 - May 2024',
   },
 ];
 
