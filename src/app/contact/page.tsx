@@ -18,12 +18,6 @@ const socials = [
     handle: 'augustine.fngobie@limkokwing.edu.sl',
   },
   {
-    icon: <FaLinkedin size={20} />,
-    href: 'https://www.linkedin.com/in/augustine-foday-ngobie-569723294/',
-    label: 'LinkedIn',
-    handle: 'Augustine Ngobie',
-  },
-  {
     icon: <FaGithub size={20} />,
     href: 'https://github.com/ngobiea',
     label: 'Github',
