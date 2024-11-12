@@ -41,7 +41,7 @@ export default function Home() {
         <div className='hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-gray-300/0 via-gray-300/50 to-gray-300/0' />
         <section className='my-16 text-center animate-fade-in'>
           <Typography variant='h2' className='text-sm text-gray-500 '>
-            A professional software engineer {`&`} developer.
+            {`A professional software engineer, developer & lecturer with a passion for technology and education.`} 
           </Typography>
         </section>
 
