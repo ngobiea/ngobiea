@@ -15,10 +15,14 @@ export default function AboutPage() {
         </Typography>
 
         <Typography variant='lead' color='white' className='text-center px-3'>
-          I am a professional software engineer and developer. I have passion
-          for engineering and building software applications. I have experience
-          in building web applications, mobile applications, and desktop
-          software applications.
+          Innovative Software Engineer and dedicated Lecturer. Expert in full
+          stack development with a proven record of creating and managing
+          dynamic applications, driving technological growth, and imparting
+          technical knowledge to aspiring developers. Passionate about
+          contributing to the digital transformation of education and other
+          sectors in Sierra Leone. Seeking opportunities to deepen expertise in
+          Cyber Security, Data Science, or Artificial Intelligence to impact the
+          country’s technological advancement.
         </Typography>
       </header>
       <div className='w-full h-px bg-gray-800' />
