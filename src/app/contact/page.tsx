@@ -12,6 +12,12 @@ const socials = [
     handle: 'ngobiea@gmail.com',
   },
   {
+    icon: <BiLogoGmail size={20} />,
+    href: 'mailto:augustine.fngobie@limkokwing.edu.sl',
+    label: 'Email',
+    handle: 'augustine.fngobie@limkokwing.edu.sl',
+  },
+  {
     icon: <FaLinkedin size={20} />,
     href: 'https://www.linkedin.com/in/augustine-foday-ngobie-569723294/',
     label: 'LinkedIn',
@@ -22,6 +28,12 @@ const socials = [
     href: 'https://github.com/ngobiea',
     label: 'Github',
     handle: 'ngobiea',
+  },
+  {
+    icon: <FaWhatsapp size={20} />,
+    href: 'https://wa.me/23272205781',
+    label: 'WhatsApp',
+    handle: '+23272205781',
   },
   {
     icon: <FaWhatsapp size={20} />,
