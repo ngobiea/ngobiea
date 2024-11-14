@@ -4,7 +4,7 @@ import EECard from './eecard';
 
 const experiences = [
   {
-    title: 'FULL TIME LECTURER FACULTY OF INFORMATION COMMUNICATION & TECHNOLOGY(FICT)',
+    title: 'FULL TIME LECTURER',
     institution: 'LIMKOKWING UNIVERSITY OF CREATIVE TECHNOLOGY, SIERRA LEONE',
     date: 'July 2024 - Present',
   },
